@@ -79,5 +79,25 @@ public class StringHandling {
            System.out.print(rev[z]);
        }
 
+
+        /*
+         String []evn_rev  = s6.split(" ");
+            for (int i=0; i <evn_rev.length ;i++ )
+            {
+                if(i%2==1) {
+                    rev=reverse
+                }
+            }
+
+
+
+
+            static String reverse(String s6)
+        {
+            char c[]=s6.toCharArray();
+
+        }
+      */
+
     }
 }
