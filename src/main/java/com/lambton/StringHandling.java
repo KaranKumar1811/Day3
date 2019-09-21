@@ -1,9 +1,38 @@
 package com.lambton;
 
+import jdk.vm.ci.meta.Local;
+import org.graalvm.compiler.lir.alloc.lsra.Interval;
+
+import java.text.DateFormat;
+import java.text.DecimalFormat;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.Period;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
+
 public class StringHandling {
 
     public static void main(String[] args) {
 
+        String pattern="";
+        DecimalFormat format=new DecimalFormat();
+        format.applyLocalizedPattern(pattern);
+
+        int value = 12345678;
+        String output = format.format(value);
+        System.out.println(value + " "+pattern+" "+output);
+
+        DateTimeFormatter dtf =DateTimeFormatter.ofPattern("yyyy/MM/dd hh:mm:ss");
+        LocalDateTime now= LocalDateTime.now();
+        System.out.println(dtf.format(now));
+
+
+        LocalDate d1=LocalDate.of(1996,11,18);
+        LocalDate d2=LocalDate.now();
+
+        Period p=Period.between(d1,d2);
+        System.out.println(p);
         String s1="Hello";
         String s2="Hello";
         String s3=s1;
@@ -80,7 +109,7 @@ public class StringHandling {
        }
 
 
-        /*
+    /*
          String []evn_rev  = s6.split(" ");
             for (int i=0; i <evn_rev.length ;i++ )
             {
@@ -95,9 +124,13 @@ public class StringHandling {
             static String reverse(String s6)
         {
             char c[]=s6.toCharArray();
+            char rev[]=new char[d.length];
+            int cnt = 0;
 
-        }
-      */
+        }*/
+
+
+
 
     }
 }
